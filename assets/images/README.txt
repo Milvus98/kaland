@@ -1,0 +1,1 @@
+Ide jöhet majd: cover-placeholder.jpg, térkép háttér, helyszín képek.
