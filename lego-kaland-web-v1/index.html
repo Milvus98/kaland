@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+
+  <title>ÉLETÜNK KALANDJA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <main class="app">
+
+    <!-- ========================================
+         INTRO KÉPERNYŐ
+    ========================================= -->
+
+    <section id="introScreen" class="screen intro-screen">
+      <div class="intro-card">
+
+        <p class="small-label">EST. 2026.07.11</p>
+
+        <h1>ÉLETÜNK KALANDJA</h1>
+
+        <div class="video-frame">
+
+          <video
+            id="introVideo"
+            class="intro-video"
+            poster="assets/images/cover-placeholder.jpg"
+            playsinline
+          >
+            <source
+              src="https://pub-159d88d5e842487a9e89b77dacafbf7c.r2.dev/Intro.mp4"
+              type="video/mp4"
+            />
+
+            A böngésződ nem támogatja a videó lejátszását.
+          </video>
+
+          <div
+            id="videoPlaceholder"
+            class="video-placeholder"
+          >
+            <button
+              id="playIntroBtn"
+              class="play-overlay"
+              type="button"
+              aria-label="Intro videó lejátszása"
+            >
+              ▶
+            </button>
+          </div>
+
+        </div>
+
+        <button
+          id="skipIntroBtn"
+          class="wood-button"
+          type="button"
+        >
+          Tovább a térképre
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- ========================================
+         TÉRKÉP KÉPERNYŐ
+    ========================================= -->
+
+    <section
+      id="mapScreen"
+      class="screen map-screen hidden"
+    >
+
+      <div class="map-header">
+        <p class="small-label">Világtérkép</p>
+        <h2>Válasszatok egy helyszínt!</h2>
+      </div>
+
+
+      <div class="map-board">
+
+        <!-- 1. HELYSZÍN -->
+
+        <button
+          class="location location-1 quest locked"
+          data-location="1"
+          data-quest="hangok-erdeje"
+          data-icon="🎵"
+          type="button"
+          disabled
+        >
+          <span class="quest-icon">🔒</span>
+        </button>
+
+
+        <!-- 2. HELYSZÍN -->
+
+        <button
+          class="location location-2 quest locked"
+          data-location="2"
+          data-quest="utazas-a-vegtelenbe"
+          data-icon="🌀"
+          type="button"
+          disabled
+        >
+          <span class="quest-icon">🔒</span>
+        </button>
+
+
+        <!-- 3. HELYSZÍN -->
+
+        <button
+          class="location location-3 quest locked"
+          data-location="3"
+          data-quest="mozgokepek-volgye"
+          data-icon="🎬"
+          type="button"
+          disabled
+        >
+          <span class="quest-icon">🔒</span>
+        </button>
+
+
+        <!-- 4. HELYSZÍN -->
+
+        <button
+          class="location location-4 quest locked"
+          data-location="4"
+          data-quest="konyvek-barlangja"
+          data-icon="📖"
+          type="button"
+          disabled
+        >
+          <span class="quest-icon">🔒</span>
+        </button>
+
+
+        <!-- 5. HELYSZÍN -->
+
+        <button
+          class="location location-5 quest locked"
+          data-location="5"
+          data-quest="a-jovo-horizontjan"
+          data-icon="🌅"
+          type="button"
+          disabled
+        >
+          <span class="quest-icon">🔒</span>
+        </button>
+
+
+        <!-- 6. KÖZPONTI HELYSZÍN -->
+
+        <button
+          class="center-place quest locked"
+          data-location="6"
+          data-quest="almok-birodalma"
+          data-icon="🏰"
+          type="button"
+          disabled
+        >
+          <span class="quest-icon">🔒</span>
+        </button>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========================================
+       SÁRKÁNY PATRÓNUS
+  ========================================= -->
+
+  <div
+    id="dragonPatronus"
+    class="dragon-patronus"
+    aria-hidden="true"
+  >
+    <img
+      src="assets/images/dragonPatronus.png"
+      alt=""
+    >
+  </div>
+
+
+  <!-- ========================================
+       HELYSZÍN ABLAK
+  ========================================= -->
+
+ 
+
+ <dialog id="locationDialog">
+  <button
+    id="closeDialogBtn"
+    class="close-button"
+    type="button"
+    aria-label="Ablak bezárása"
+  >
+    ×
+  </button>
+
+  <div id="locationDialogContent" class="dialog-content"></div>
+</dialog>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>
